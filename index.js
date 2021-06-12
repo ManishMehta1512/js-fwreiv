@@ -2,24 +2,26 @@
 import './style.css';
 
 // Write Javascript code!
+
+function changeObject(x) {
+  x = { member: "bar" };
+  console.log("in changeObject: " + x.member);
+}
+
+function changeMember(x) {
+  x.member = "bar";
+  console.log("in changeMember: " + x.member);
+}
+
+var x = { member: "foo" };
+
+console.log("before changeObject: " + x.member);
+changeObject(x);
+console.log("after changeObject: " + x.member); /* change did not persist */
+
+console.log("before changeMember: " + x.member);
+changeMember(x);
+console.log("after changeMember: " + x.member); /* change persists */
+
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
-
-function Passbyvalue(a, b) {
-    let tmp;
-    tmp = b;
-    b = a;
-    a = tmp;
-    console.log(`Inside Pass by value 
-        function -> a = ${a} b = ${b}`);
-}
-  
-let a = 1;
-let b = 2;
-console.log(`Before calling Pass by value 
-        Function -> a = ${a} b = ${b}`);
-  
-Passbyvalue(a, b);
-  
-console.log(`After calling Pass by value 
-       Function -> a =${a} b = ${b}`);
