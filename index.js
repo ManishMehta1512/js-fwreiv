@@ -2,16 +2,17 @@
 import './style.css';
 
 // Write Javascript code!
+function changeMember(x) {
+  x.member = "bar";
+  console.log("in changeMember: " + x.member);
+}
 
 function changeObject(x) {
   x = { member: "bar" };
   console.log("in changeObject: " + x.member);
 }
 
-function changeMember(x) {
-  x.member = "bar";
-  console.log("in changeMember: " + x.member);
-}
+
 
 var x = { member: "foo" };
 
